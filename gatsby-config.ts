@@ -1,4 +1,6 @@
 import type { GatsbyConfig } from "gatsby";
+import fs from 'fs';
+const path = `.env.${process.env.NODE_ENV}`;
 
 const config: GatsbyConfig = {
   siteMetadata: {
