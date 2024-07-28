@@ -4,16 +4,17 @@ const path = `.env.${process.env.NODE_ENV}`;
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Rare Breed Ink Tattoo Studio`,
+    title: `Rare Breed Ink Studio | Tattoo Shop in Tacoma, WA`,
     siteUrl: `https://rarebreedinkstudio.com`,
     canonicalUrl: 'https://rarebreedinkstudio.com',
     author: 'Rare Breed Ink',
+    ratings: '5/5 stars on Google, Yelp, and Facebook.',
     description: `One of Washington State's highest-rated tattoo studios, located conveniently in the heart of downtown Tacoma. Experience world-class body art from our talented and licensed artists. We specialize in a wide range of artistic style, including black and gray realism, anime, horror, and much more. Book now!`,
     hours: '11am-7pm',
     phone: '(253)-301-1107',
     openGraph: {
       type: 'website',
-      title: 'Rare Breed Ink Tattoo Studio',
+      title: 'Rare Breed Ink Studio | Tattoo Shop in Tacoma, WA',
       description: `Home to Tacoma's finest tattoo artists. Book your masterpiece today!`,
       url: 'https://rarebreedinkstudio.com',
       image: 'https://rarebreedinkstudio.com/og-image.jpg',
@@ -30,23 +31,26 @@ const config: GatsbyConfig = {
     },
     artists: [
       { name: 'Los', instagram: 'https://www.instagram.com/rarebreedinkstudio/',
-        styles: 'black and gray, realism, portraits, coverups, and custom designs',
+        styles: [ 'chicano tattoos', 'black and gray', 'realism', 'portraits', 'pet portraits', 'memorial', 'coverups', 'religious', 'sports tattoos', 'slasher film tattoos' ],
         gender: 'male artist', languages: ['English', 'Spanish'],
         email: 'rarebreedink206@gmail.com', facebook: 'https://www.facebook.com/rarebreedink66/'
       },
       { name: 'Sam', instagram: 'https://www.instagram.com/lovelyinink_/',
-        styles: 'anime, stipple, japanese, neo traditional, watercolor, and custom designs',
+        styles: [ 'anime', 'cartoon', 'Studio Ghibli tattoos', 'stipple', 'japanese', 'neo traditional', 'floral', 'geometric' ],
         gender: 'female artist', languages: ['English']
       },
       { name: 'Raye', instagram: 'https://www.instagram.com/rayetattoos/',
-        styles: 'horror, traditional, neo traditional, cyber sigilism, fine line, and custom designs',
+        styles: [ 'horror', 'illustrative', 'traditional', 'neo traditional', 'japanese', 'cyber sigilism', 'fine line' ],
         gender: 'female artist', languages: ['English'], email: 'raveninkworkbooking@gmail.com'
       }
     ],
     competitiors: [
       { name: `${process.env.COMPETITOR1}`, url: `${process.env.COMPETITOR1_URL}`},
       { name: `${process.env.COMPETITOR2}`, url: `${process.env.COMPETITOR2_URL}`},
-      { name: `${process.env.COMPETITOR3}`, url: `${process.env.COMPETITOR3_URL}`}
+      { name: `${process.env.COMPETITOR3}`, url: `${process.env.COMPETITOR3_URL}`},
+      { name: `${process.env.COMPETITOR4}`, url: `${process.env.COMPETITOR4_URL}`},
+      { name: `${process.env.COMPETITOR5}`, url: `${process.env.COMPETITOR5_URL}`},
+      { name: `${process.env.COMPETITOR6}`, url: `${process.env.COMPETITOR6_URL}`}
     ],
     developer:  
       { name: 'David Newman', 
