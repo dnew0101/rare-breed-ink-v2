@@ -7,8 +7,6 @@ interface LayoutProps {
     children: React.ReactNode;
 }
 
-
-//react functional component
 const Layout = ({ pageTitle, children }: LayoutProps) => {
   return (
     <div>
