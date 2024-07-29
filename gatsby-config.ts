@@ -1,6 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
-import fs from 'fs';
-const path = `.env.${process.env.NODE_ENV}`;
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -23,12 +24,21 @@ const config: GatsbyConfig = {
     },
     location: {
       address: '711 St Helens Ave',
-      suite: 'Suite 201',
+      building: 'Ledger Square Building',
+      suite: 'Suite #201',
       city: 'Tacoma',
-      state: 'WA',
+      state: 'Washington',
       zip: '98402',
-      country: 'USA'
+      country: 'United States of America',
     },
+    nearbyLandmarks:[
+      'Ledger Square Park',
+      'McMenamins Elks Temple',
+      'Rialto Theater',
+      'University of Washington Tacoma',
+      'Tacoma Art Museum',
+      'Tacoma Dome'
+    ],
     artists: [
       { name: 'Los', instagram: 'https://www.instagram.com/rarebreedinkstudio/',
         styles: [ 'chicano tattoos', 'black and gray', 'realism', 'portraits', 'pet portraits', 'memorial', 'coverups', 'religious', 'sports tattoos', 'slasher film tattoos' ],
@@ -36,11 +46,11 @@ const config: GatsbyConfig = {
         email: 'rarebreedink206@gmail.com', facebook: 'https://www.facebook.com/rarebreedink66/'
       },
       { name: 'Sam', instagram: 'https://www.instagram.com/lovelyinink_/',
-        styles: [ 'anime', 'cartoon', 'Studio Ghibli tattoos', 'stipple', 'japanese', 'neo traditional', 'floral', 'geometric' ],
+        styles: [ 'anime', 'cartoon', 'Studio Ghibli tattoos', 'stipple', 'Japanese', 'neo traditional', 'floral', 'geometric' ],
         gender: 'female artist', languages: ['English']
       },
       { name: 'Raye', instagram: 'https://www.instagram.com/rayetattoos/',
-        styles: [ 'horror', 'illustrative', 'traditional', 'neo traditional', 'japanese', 'cyber sigilism', 'fine line' ],
+        styles: [ 'horror tattoos', 'illustrative', 'traditional', 'neo traditional', 'Japanese', 'cyber sigilism', 'fine line' ],
         gender: 'female artist', languages: ['English'], email: 'raveninkworkbooking@gmail.com'
       }
     ],
